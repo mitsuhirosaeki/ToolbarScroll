@@ -98,6 +98,13 @@ public class WebFragment extends Fragment {
                     count++;
                     if (count > 1){mBaseTranslationY = y;}
 
+
+                    ViewGroup.LayoutParams layoutParams = webView.getLayoutParams();
+                    ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams)layoutParams;
+                    marginLayoutParams.setMargins(marginLayoutParams.leftMargin,30,marginLayoutParams.rightMargin,marginLayoutParams.bottomMargin);
+                    webView.setLayoutParams(marginLayoutParams);
+
+
                 }
             }
 
